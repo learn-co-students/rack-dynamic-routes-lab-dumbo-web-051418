@@ -1,4 +1,7 @@
 class Application
+  @@items = [Item.new("iPhoneX", 999.99), Item.new("AppleTV", 149.99),
+    Item.new("Backpack", 50.0)]
+
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
